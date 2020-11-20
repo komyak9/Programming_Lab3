@@ -1,5 +1,7 @@
 package lab3.nature.plants;
 
+import java.util.Objects;
+
 public class Bush extends Plant {
     private final Leaf leaf;
 
@@ -16,10 +18,12 @@ public class Bush extends Plant {
     public Leaf getLeaf(){
         return leaf;
     }
+
     @Override
     public String toString(){
         return "куст с " + leaf.toString();
     }
+
     @Override
     public boolean equals(Object obj){
         if (obj == null || this.getClass() != obj.getClass()){
@@ -27,5 +31,10 @@ public class Bush extends Plant {
         }
         Bush bush = (Bush)obj;
         return leaf.equals(bush.getLeaf());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), leaf.getLeafColour());
     }
 }

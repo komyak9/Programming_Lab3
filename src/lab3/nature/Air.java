@@ -1,5 +1,7 @@
 package lab3.nature;
 
+import java.util.Objects;
+
 public class Air implements Atmosphere {
     protected boolean isMove;
 
@@ -28,13 +30,19 @@ public class Air implements Atmosphere {
     public String toString(){
         return "Воздух";
     }
+
     @Override
     public boolean equals(Object obj){
-        return obj != null && this.getClass() == obj.getClass();
+        if(obj == null || this.getClass() != obj.getClass()){
+            return false;
+        }
+
+        Air air = (Air)obj;
+        return isMove == air.isMove;
     }
+
     @Override
-    public int hashCode()
-    {
-        return 9;
+    public int hashCode(){
+        return Objects.hash(super.hashCode(), isMove);
     }
 }

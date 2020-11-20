@@ -3,6 +3,8 @@ package lab3.nature;
 import lab3.nature.plants.Bush;
 import lab3.nature.plants.Plant;
 
+import java.util.Objects;
+
 public class Ground extends Surface {
     private Plant plant;
 
@@ -15,8 +17,27 @@ public class Ground extends Surface {
         this.plant = plant;
     }
 
+    public Plant getPlant(){
+        return plant;
+    }
+
     @Override
     public String toString(){
         return "земельная поверхность, растения: " + plant.toString();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (obj == null || this.getClass() != obj.getClass()){
+            return false;
+        }
+
+        Ground ground = (Ground)obj;
+        return this.plant == ground.getPlant();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), plant);
     }
 }

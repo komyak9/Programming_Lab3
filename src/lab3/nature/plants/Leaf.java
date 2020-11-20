@@ -3,14 +3,11 @@ package lab3.nature.plants;
 import lab3.nature.Air;
 import lab3.person.Person;
 
+import java.util.Objects;
+
 public class Leaf {
     private LeafColour leafColour;
     private LeafSize leafSize;
-
-    public Leaf(){
-        leafColour = LeafColour.GREEN;
-        leafSize = LeafSize.MEDIUM;
-    }
 
     public Leaf(LeafColour leafColour, LeafSize leafSize){
         this.leafColour = leafColour;
@@ -54,9 +51,9 @@ public class Leaf {
         Leaf leaf = (Leaf)obj;
         return this.getLeafColour() == leaf.getLeafColour() && this.getLeafSize() == leaf.getLeafSize();
     }
+
     @Override
-    public int hashCode()
-    {
-        return 40;
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), leafSize, leafColour);
     }
 }

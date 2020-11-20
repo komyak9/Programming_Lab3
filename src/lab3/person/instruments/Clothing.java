@@ -10,4 +10,9 @@ public abstract class Clothing implements DoToClothing{
     {
         return 101;
     }
+
+    @Override
+    public String toString() {
+        return "Какая-то абстрактная одежда";
+    }
 }

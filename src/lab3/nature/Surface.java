@@ -8,9 +8,14 @@ public abstract class Surface {
     public boolean equals(Object obj){
         return obj != null && this.getClass() == obj.getClass();
     }
+
     @Override
-    public int hashCode()
-    {
-        return 848;
+    public int hashCode() {
+        return super.hashCode() * 21;
+    }
+
+    @Override
+    public String toString() {
+        return "Какая-то поверхность";
     }
 }

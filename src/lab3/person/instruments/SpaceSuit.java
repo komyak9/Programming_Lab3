@@ -15,4 +15,14 @@ public class SpaceSuit extends Clothing {
     public String toString(){
         return "Скафандр";
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        return obj != null && this.getClass() == obj.getClass();
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode() * 12;
+    }
 }
