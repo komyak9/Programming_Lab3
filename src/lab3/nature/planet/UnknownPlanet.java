@@ -20,6 +20,6 @@ public class UnknownPlanet extends Planet{
 
     @Override
     public int hashCode() {
-        return super.hashCode() * 21;
+        return super.hashCode();
     }
 }

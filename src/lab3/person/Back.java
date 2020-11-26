@@ -23,6 +23,6 @@ public class Back{
 
     @Override
     public int hashCode() {
-        return super.hashCode() * 12;
+        return super.hashCode();
     }
 }

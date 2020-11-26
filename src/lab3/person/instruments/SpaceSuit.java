@@ -23,6 +23,6 @@ public class SpaceSuit extends Clothing {
 
     @Override
     public int hashCode() {
-        return super.hashCode() * 12;
+        return super.hashCode();
     }
 }

@@ -5,10 +5,10 @@ public abstract class Clothing implements DoToClothing{
     public boolean equals(Object obj){
         return obj != null && this.getClass() == obj.getClass();
     }
+
     @Override
-    public int hashCode()
-    {
-        return 101;
+    public int hashCode() {
+        return super.hashCode();
     }
 
     @Override

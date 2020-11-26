@@ -18,6 +18,6 @@ public abstract class Plant {
 
     @Override
     public int hashCode() {
-        return super.hashCode() * 21;
+        return super.hashCode();
     }
 }

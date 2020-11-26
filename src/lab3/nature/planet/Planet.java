@@ -14,13 +14,22 @@ public abstract class Planet {
         this.air = air;
     }
 
-    public void getAir(){
-        System.out.println(air.toString() + " на " + this + ".");
+    public Air getAir(){
+        return air;
+    }
+
+    public Surface getSurface(){
+        return surface;
     }
 
     @Override
     public boolean equals(Object obj){
-        return obj != null && this.getClass() == obj.getClass();
+        if( obj == null && this.getClass() != obj.getClass()){
+            return false;
+        }
+
+        Planet planet = (Planet)obj;
+        return this.surface.equals(planet.getSurface()) && this.air.equals(planet.getAir());
     }
 
     @Override

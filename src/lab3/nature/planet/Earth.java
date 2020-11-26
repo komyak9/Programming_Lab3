@@ -20,6 +20,6 @@ public class Earth extends Planet{
 
     @Override
     public int hashCode() {
-        return super.hashCode() * 21;
+        return super.hashCode();
     }
 }

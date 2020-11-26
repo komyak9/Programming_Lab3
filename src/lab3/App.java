@@ -42,7 +42,5 @@ public class App {
         Surface earthSurface = new Ground();
         Planet earth = new Earth(earthSurface, air);
         earth.getAir();
-
-        System.out.println(person.hashCode());
     }
 }

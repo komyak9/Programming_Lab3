@@ -12,6 +12,6 @@ public class WingedParachute extends Parachute {
 
     @Override
     public int hashCode() {
-        return super.hashCode() * 21;
+        return super.hashCode();
     }
 }

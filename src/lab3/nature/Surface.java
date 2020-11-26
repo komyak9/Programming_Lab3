@@ -11,7 +11,7 @@ public abstract class Surface {
 
     @Override
     public int hashCode() {
-        return super.hashCode() * 21;
+        return super.hashCode();
     }
 
     @Override

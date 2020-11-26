@@ -33,7 +33,7 @@ public class Ground extends Surface {
         }
 
         Ground ground = (Ground)obj;
-        return this.plant == ground.getPlant();
+        return this.plant.equals(ground.getPlant());
     }
 
     @Override
